@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Soccer Academy</title>
+</head>
+
+<body>
+    <nav
+        class=" font-weight-bold d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none" href="index.html">Soccer Academy</a>
+        <div class="my-2 my-md-0 mr-md ">
+            <a class="p-2 text-success" href="index.html">Home</a>
+            <a class="p-2 text-success" href="Leagues.html">Leagues</a>
+        </div>
+    </nav>
+    <div class="container">
+            <div id="servicesCategories">
+                    <h1>Search by :</h1>
+                    <section class="row">
+                      <!--Dropdown Menu for search by League-->
+                      <div class="dropdown row col-md-8 mt-5">
+                            <button id="dropdownmenu" type="button" class="btn dropdown custom-select d-block font-weight-bold" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false"> Select a League
+                            </button>
+                            <!-- This codes fails HTML validation  (x-placement not allowed )but it came from Boostrap class-->
+                            <div id="categoryList" class="dropdown-menu col-md-7" aria-labelledby="dropdownmenu">
+                            </div>
+                          </div>
+                    </section>
+                    <!--Services-->
+                    <section class="hidden" id="servicesContainer">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h4 id="teamsName" class="text-center mt-5 font-weight-bold">&nbsp;</h4>
+                          <ul id="serviceList"></ul>
+                        </div>
+                        <!--Cards with Information-->
+                        <div class="hidden cards" id="serviceCard">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title cardsTitle font-weight-bold text-center" id="cardTitle">&nbsp;</h5>
+                              <p class="card-text" id="cardText1">&nbsp;</p>
+                              <p class="card-text" id="cardText2">&nbsp;</p>
+                              <p class="card-text" id="cardText3">&nbsp;</p>
+                              <p class="card-text" id="cardText4">&nbsp;</p>
+                              <p class="card-text" id="cardText5">&nbsp;</p>
+                              <p class="card-text" id="cardText6">&nbsp;</p>
+                            </div>
+                            <img class=" text-center card-img-bottom " src="#" alt="#" id="cardText4" />
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>   
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/leagues.js"></script>
+</body>
+
+</html>

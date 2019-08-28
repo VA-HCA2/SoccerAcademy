@@ -7,8 +7,8 @@
         "ManagerPhone": "895-291-8146",
         "ManagerEmail": "sammy@yahoo.com",
         "MaxTeamMembers": 11,
-        "MinMemberAge": 0,
-        "MaxMemberAge": 100,
+        "MinMemberAge": 20,
+        "MaxMemberAge": 30,
         "TeamGender": "Female",
         "Members": [
             {
@@ -50,7 +50,7 @@
         "MinAge": 0,
         "MaxAge": 28,
         "MaxTeamMembers": 11,
-        "TeamGender": "Male",
+        "TeamGender": "Any",
         "Members": [
             {
                 "MemberId": 4,
