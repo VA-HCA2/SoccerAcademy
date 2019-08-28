@@ -1,0 +1,15 @@
+.hidden {
+    display: none
+  }
+ 
+  h1,h5{
+      font-size: 20px
+  }
+
+  #dropdownmenu {
+    margin-left: 250px;
+  }
+  .cards {
+    margin-top: 80px
+  }
+  

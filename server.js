@@ -178,6 +178,10 @@ app.get("/index.html", function (req, res) {
     res.sendFile( __dirname + "/public/" + "index.html" );
  })
 
+
+ app.get("/leagues.html", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "leagues.html" );
+ })
 // TODO:  YOU WILL NEED TO ADD MORE CALLS TO app.get() FOR EACH PAGE
 //        YOU END UP BUILDING
 
