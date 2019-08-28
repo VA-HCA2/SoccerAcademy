@@ -1,0 +1,17 @@
+[
+    {
+        "Name": "Connecticut Junior Team",
+        "Code": "CTTeam",
+        "Description": "This league consists of teams kids"
+    },
+    {
+        "Name": "Texas Soccer Team",
+        "Code": "TXTeam",
+        "Description": "This league consists of teams of boys"
+    },
+    {
+        "Name": "Intenational Soccer Team",
+        "Code": "IntLeague",
+        "Description": "This league consists of teams of girls or boys"
+    }
+]

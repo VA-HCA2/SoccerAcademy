@@ -1,0 +1,107 @@
+[
+    {
+        "TeamId": 1,
+        "TeamName": "South America Team",
+        "League": "IntLeague",
+        "ManagerName": "Samantha Proano",
+        "ManagerPhone": "895-291-8146",
+        "ManagerEmail": "sammy@yahoo.com",
+        "MaxTeamMembers": 11,
+        "MinMemberAge": 0,
+        "MaxMemberAge": 100,
+        "TeamGender": "Female",
+        "Members": [
+            {
+                "MemberId": 1,
+                "Email": "estefaniapro@aol.com",
+                "MemberName": "Estefania Proano",
+                "ContactName": "Estefania Proano",
+                "Age": 23,
+                "Gender": "Female",
+                "Phone": "817-291-8146"
+            },
+            {
+                "MemberId": 2,
+                "Email": "gabrielacarrion@yahoo.com",
+                "MemberName": "Gabriela Carrion",
+                "ContactName": "Gabriela Carrion",
+                "Age": 22,
+                "Gender": "Female",
+                "Phone": "817-555-5555"
+            },
+            {
+                "MemberId": 3,
+                "Email": "thaliacarrion@aol.com",
+                "MemberName": "Thalia Carrion",
+                "ContactName": "Thalia Carrion",
+                "Age": 20,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    },
+	{
+        "TeamId": 2,
+        "TeamName": "Central America Team",
+        "League": "IntLeague",
+        "ManagerName": "Lizeth Gonzales",
+        "ManagerPhone": "817-555-5454",
+        "ManagerEmail": "lizgonzales@aol.com",
+        "MinAge": 0,
+        "MaxAge": 28,
+        "MaxTeamMembers": 11,
+        "TeamGender": "Male",
+        "Members": [
+            {
+                "MemberId": 4,
+                "Email": "hectorvillarreal@aol.com",
+                "MemberName": "Hector Villarreal",
+                "ContactName": "Hector Villarreal",
+                "Age": 26,
+                "Gender": "Male",
+                "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 5,
+                "Email": "alemadera214@aol.com",
+                "MemberName": "Alejandra Madera",
+                "ContactName": "Alejandra Madera",
+                "Age": 27,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    },
+{
+        "TeamId": 3,
+        "TeamName": "North American Team",
+        "League": "IntLeague",
+        "ManagerName": "Paulina Arce",
+        "ManagerPhone": "817-555-5454",
+        "ManagerEmail": "alejarce12@aol.com",
+        "MinAge": 0,
+        "MaxAge": 28,
+        "MaxTeamMembers": 11,
+        "TeamGender": "Female",
+        "Members": [
+            {
+                "MemberId": 6,
+                "Email": "majo_arce90@aol.com",
+                "MemberName": "Maria Arce",
+                "ContactName": "Maria Arce",
+                "Age": 29,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 7,
+                "Email": "marissaro@aol.com",
+                "MemberName": "Marissa Estrada",
+                "ContactName": "Marissa Estrada",
+                "Age": 27,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    }
+]
