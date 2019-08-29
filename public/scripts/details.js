@@ -2,23 +2,20 @@
 $(function () {
     let urlParams = new URLSearchParams(location.search);
     let TeamId = urlParams.get("TeamId");
-
+    let obj;
 
     // Get information with the Team Id of the selected team.
     $.getJSON("api/teams/" + TeamId, function (data) {
-        let obj;
         obj = data;
         teamDetails(obj)
         playersDetails(obj, TeamId)
+
+
+        $("#registerButton").attr("href", "register.html?TeamId=" + TeamId);
+        $("#registerButton").on("click", function () {
+            document.location.href = "register.html?TeamId=" + TeamId;
+        });
     });
-
-    // Necesito ver si esto esta bien
-    $("#registerButton").attr("href", "register.html?TeamId=" + TeamId);
-
-    $("#registerButton").on("click", function () {
-        document.location.href = "register.html?TeamId=" + TeamId;
-    });
-
 
 }); // end of ready fuction
 
@@ -26,7 +23,7 @@ $(function () {
 function teamDetails(obj) {
     let details =
         "<tr><td colspan='2' class='text-center font-weight-bold text-uppercase'>" + obj.TeamName + "</td></tr>" + // Second Row
-        "<tr><td class='font-weight-bold'> League: </td><td>" +obj.League + "</td></tr>" +
+        "<tr><td class='font-weight-bold'> League: </td><td>" + obj.League + "</td></tr>" +
         "<tr><td class='font-weight-bold'> Manager Information: </td><td>" +
         obj.ManagerName + '<br>' + obj.ManagerPhone + '<br>' + obj.ManagerEmail + "</td></t>" +
         "<tr><td class='font-weight-bold'> Team Rules: </td><td>" +
