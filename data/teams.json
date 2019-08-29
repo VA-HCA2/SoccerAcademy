@@ -1,7 +1,7 @@
 [
     {
         "TeamId": 1,
-        "TeamName": "South America Team",
+        "TeamName": "South American Team",
         "League": "IntLeague",
         "ManagerName": "Samantha Proano",
         "ManagerPhone": "895-291-8146",
@@ -42,12 +42,12 @@
     },
 	{
         "TeamId": 2,
-        "TeamName": "Central America Team",
+        "TeamName": "Central American Team",
         "League": "IntLeague",
         "ManagerName": "Lizeth Gonzales",
         "ManagerPhone": "817-555-5454",
         "ManagerEmail": "lizgonzales@aol.com",
-        "MinAge": 0,
+        "MinAge": 18,
         "MaxAge": 28,
         "MaxTeamMembers": 11,
         "TeamGender": "Any",
@@ -79,7 +79,7 @@
         "ManagerName": "Paulina Arce",
         "ManagerPhone": "817-555-5454",
         "ManagerEmail": "alejarce12@aol.com",
-        "MinAge": 0,
+        "MinAge": 18,
         "MaxAge": 28,
         "MaxTeamMembers": 11,
         "TeamGender": "Female",
@@ -103,5 +103,143 @@
                 "Phone": "817-555-5454"
             }
         ]
-    }
+    },
+    {
+        "TeamId": 4,
+        "TeamName": "San Antonio Team",
+        "League": "TXTeam",
+        "ManagerName": "Luica Mendoza",
+        "ManagerPhone": "234-291-8146",
+        "ManagerEmail": "luciamendoza@yahoo.com",
+        "MaxTeamMembers": 11,
+        "MinMemberAge": 18,
+        "MaxMemberAge": 30,
+        "TeamGender": "Female",
+        "Members": [
+            {
+                "MemberId": 8,
+                "Email": "paolaandrade@aol.com",
+                "MemberName": "Paola Andrade",
+                "ContactName": "Paola Andrade",
+                "Age": 18,
+                "Gender": "Female",
+                "Phone": "817-291-8146"
+            },
+            {
+                "MemberId": 9,
+                "Email": "veronicaencalada@yahoo.com",
+                "MemberName": "Veronica Encalada",
+                "ContactName": "Veronica Encalada",
+                "Age": 25,
+                "Gender": "Female",
+                "Phone": "817-555-5555"
+            },
+            {
+                "MemberId": 10,
+                "Email": "margaritamartinez@aol.com",
+                "MemberName": "Margarita Martinez",
+                "ContactName": "Margarita Martinez",
+                "Age": 20,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    },
+	{
+        "TeamId": 5,
+        "TeamName": "Austin Team",
+        "League": "TXTeam",
+        "ManagerName": "Tara Valenzuela",
+        "ManagerPhone": "817-555-5454",
+        "ManagerEmail": "taravalenz@aol.com",
+        "MinAge": 18,
+        "MaxAge": 28,
+        "MaxTeamMembers": 11,
+        "TeamGender": "Any",
+        "Members": [
+            {
+                "MemberId": 11,
+                "Email": "victorRobles@aol.com",
+                "MemberName": "Victor Robles",
+                "ContactName": "Victor Robles",
+                "Age": 26,
+                "Gender": "Male",
+                "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 12,
+                "Email": "laurarobles@aol.com",
+                "MemberName": "Laura Robles",
+                "ContactName": "Laura Robles",
+                "Age": 27,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    },
+{
+        "TeamId": 6,
+        "TeamName": "Dallas Team",
+        "League": "TXTeam",
+        "ManagerName": "Sonia Robles",
+        "ManagerPhone": "817-555-5454",
+        "ManagerEmail": "soniaRobles@aol.com",
+        "MinAge": 18,
+        "MaxAge": 45,
+        "MaxTeamMembers": 11,
+        "TeamGender": "Female",
+        "Members": [
+            {
+                "MemberId": 13,
+                "Email": "shantallyomaira@aol.com",
+                "MemberName": "Shantall Robles",
+                "ContactName": "Shantall Robles",
+                "Age": 29,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 14,
+                "Email": "marissaro@aol.com",
+                "MemberName": "Marissa Estrada",
+                "ContactName": "Marissa Estrada",
+                "Age": 27,
+                "Gender": "Female",
+                "Phone": "817-555-5454"
+            }
+        ]
+    },
+    {
+        "TeamId": 7,
+        "TeamName": "Hartford Team",
+        "League": "CTTeam",
+        "ManagerName": "Maria Arce",
+        "ManagerPhone": "817-555-5454",
+        "ManagerEmail": "majo_arce12@aol.com",
+        "MinAge": 18,
+        "MaxAge": 30,
+        "MaxTeamMembers": 11,
+        "TeamGender": "Male",
+        "Members": [
+            {
+                "MemberId": 13,
+                "Email": "cristiancarrion@aol.com",
+                "MemberName": "Cristian Carrion",
+                "ContactName": "Cristian Carrion",
+                "Age": 29,
+                "Gender": "Male",
+                "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 14,
+                "Email": "andrescepeda@aol.com",
+                "MemberName": "Andres Cepeda",
+                "ContactName": "Andres Cepeda",
+                "Age": 27,
+                "Gender": "Male",
+                "Phone": "817-555-8765"
+            }
+        ]
+    }    
+        
 ]

@@ -1,58 +1,52 @@
 // Onload function
 "use strict";
 $(function () {
-
+    let objs;
+    let leaguesObjs;
     // get data from JSON file
-    $.getJSON('/api/leagues', function (data)
-    {
-        // Create my category list dropdown
-        $.each(data, function (index,info ) {
-            $('#categoryList').append($('<a/>')
-                .attr('class', 'dropdown-item')
-                .text(info.Name)
-                .attr('href', '#')
-                .on('click', function (e) {
-                    e.preventDefault();
-                    $('#categoryName').text(info.Name);
-                    getTeams(info.Code);
-            }));
-        });
+    $.getJSON('/api/leagues', function (data) {
+     objs = data;
+    // Create my dropdown information from api/categories
+    for (let i = 0; i < objs.length; i++) {
+      let text = objs[i].Name;
+      let value = objs[i].Code;
+      let mydropDownOption = $("<option>", {
+        value: value,
+        text: text
+      });
+      mydropDownOption.appendTo("#leaguesddl");
+    }
     });
+  // Onchange function
+  $("#leaguesddl").change(function () {
+    // Clear my table header and table body when the student selects another course. 
+    $("#teamTable").empty();
+    $("#teamHeader").empty();
+    $.getJSON("/api/teams/byleague/" + $("#leaguesddl").val(), function (data) {
+      
+      leaguesObjs = data;
+
+      //Table header starts
+      let teamsHeader = $(
+        "<tr><th>Team Name</th><th>Manager</th><th>Phone Number</th><th>&nbsp;</th><th>&nbsp;</th></tr>");
+
+      $("#teamHeader").append(teamsHeader);
+      // End of table header
+
+      for (let i = 0; i < leaguesObjs.length; i++) {
+
+        //Table Body
+        let str = "<tr><td>" + leaguesObjs[i].TeamName + "</td><td>" + leaguesObjs[i].ManagerName+ "</td><td>"
+         + leaguesObjs[i].ManagerPhone+ "</td><td>"+"<a href=details.html?TeamId=" + leaguesObjs[i].TeamId + ">Details<a>" + "</td><td>"
+          +"<a href=edit.html?TeamId="+ leaguesObjs[i].TeamId + ">Edit<a></td></tr>";
+
+        $("#teamTable").append(str);
+
+      }//End of body table
+    }); // end of get JSON
+  }); //End of my onchange function  
+     
 });
 
 
-// Get Teams function 
-function getTeams(info) {
-    // Fade effect
-    $('#serviceCard').hide('');
-    $("#serviceList").html('');
-  // get data from JSON file
-    $.getJSON(`/api/teams/byleague/${info}`, (teamLeague) => {
-        // Create 
-        $.each(teamLeague, (index, team) => {
-            $('#serviceList').append($('<li />')
-                .text(team.TeamName)
-                .attr("class", "list-group-item list-group-item-action")
-                .on('click', function (e) {
-                    e.preventDefault();
-                    getTeamInfo(team.TeamId);
-                }));
-        });
-    });
-    $('#servicesContainer').show();
-}
 
-// Function for cards 
-function getTeamInfo(teamid) {
-    $.getJSON(`/api/teams/${teamid}`, (team) => {
-        $('#cardTitle').html(team.TeamName);
-        $('#cardText1').html("Manager Name: "+team.ManagerName);
-        $('#cardText2').html("Phone number: "+team.ManagerPhone);
-        $('#cardText3').html("Email: "+team.ManagerEmail);
-        $('#cardText4').html("Max team players : "+team.MaxTeamMembers);
-        $('#cardText5').html("Minimum Age : "+team.MinMemberAge);
-        $('#cardText6').html("Maximum Age : "+team.MaxMemberAge);
-        $('#serviceCard').show();
-    });
-
-}
