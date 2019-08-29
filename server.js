@@ -181,11 +181,21 @@ app.get("/index.html", function (req, res) {
 
  app.get("/leagues.html", function (req, res) {
     res.sendFile( __dirname + "/public/" + "leagues.html" );
+})
+
+app.get("/details.html", function (req, res) {
+        res.sendFile( __dirname + "/public/" + "details.html" ); 
  })
+
+ app.get("/register.html", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "register.html" ); 
+})
+
+app.get("/addteam.html", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "addteam.html" ); 
+})
 // TODO:  YOU WILL NEED TO ADD MORE CALLS TO app.get() FOR EACH PAGE
 //        YOU END UP BUILDING
-
-
 
 
 // ------------------------------------------------------------------------------
@@ -451,7 +461,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
         Gender: req.body.gender,
         Phone: req.body.phone
     };
-
+    // console.log(JSON.stringify(member))
     //console.log("Performing member validation...")
     if (! isValidMember(member))
     {
@@ -588,7 +598,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     console.log("Found team!");
 
     // find existing member on the team
-    let foundAt = team.Members.findIndex( m => m.MemberId == req.body.memberid );
+    let foundAt = team.Members.findIndex( m => m.MemberId == memberId);
 
     let match = null;
     // delete the member if found
