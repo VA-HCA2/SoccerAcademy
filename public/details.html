@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Soccer Academy</title>
+</head>
+
+<body>
+    <nav
+        class=" font-weight-bold d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none" href="index.html">Soccer Academy</a>
+        <div class="my-2 my-md-0 mr-md ">
+            <a class="p-2 text-success" href="index.html">Home</a>
+            <a class="p-2 text-success" href="Leagues.html">Leagues</a>
+        </div>
+    </nav>
+    <main>
+            <div class="text-center mt-5">
+                    <h1>Team Details</h1>
+                </div>
+        
+                <div class="container">
+                    <!--Form-->
+                    <form class="form " autocomplete="off" method="GET">
+                        <!--Table for Course Details-->
+                        <div>
+                            <table class=" table-striped container table table-sm col-7 table-bordered mt-5">
+                                <tbody id="detailsTable">
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="col-12 text-center">
+                            <a href="" id="registerButton" class="btn btn-primary btn-lg">Register </a>
+                        </div>
+                        <div id="studentsHide">
+                            <div class="  p-md-4 text-black ">
+                                <div class="col-md-12 px-0">
+                                    <h1 class="font-italic text-center "> Players Registered</h1>
+                                </div>
+                            </div>
+                            <!--Table for Players-->
+                            <div>
+                                <table class=" table-striped container table table-sm col-7 table-bordered mt-2">
+                                    <thead id="playersHeader" class="font-weight-bold bg-dark text-white">
+                                        </thead>
+                                         <tbody id="playersTable">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/details.js"></script>
+</body>
+
+</html>

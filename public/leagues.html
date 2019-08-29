@@ -22,48 +22,37 @@
             <a class="p-2 text-success" href="Leagues.html">Leagues</a>
         </div>
     </nav>
-    <div class="container">
-            <div id="servicesCategories">
-                    <h1>Search by :</h1>
-                    <section class="row">
-                      <!--Dropdown Menu for search by League-->
-                      <div class="dropdown row col-md-8 mt-5">
-                            <button id="dropdownmenu" type="button" class="btn dropdown custom-select d-block font-weight-bold" data-toggle="dropdown"
-                              aria-haspopup="true" aria-expanded="false"> Select a League
-                            </button>
-                            <!-- This codes fails HTML validation  (x-placement not allowed )but it came from Boostrap class-->
-                            <div id="categoryList" class="dropdown-menu col-md-7" aria-labelledby="dropdownmenu">
-                            </div>
-                          </div>
-                    </section>
-                    <!--Services-->
-                    <section class="hidden" id="servicesContainer">
-                      <div class="row">
-                        <div class="col-md-5">
-                          <h4 id="teamsName" class="text-center mt-5 font-weight-bold">&nbsp;</h4>
-                          <ul id="serviceList"></ul>
+    <main>
+        <div class="container">
+            <!--Start of Form-->
+            <form class="form " autocomplete="off" method="GET">
+                <section>
+                    <!-- Leagues ropdowns-->
+                    <div class=" mb-3">
+                        <div class=" font-weight-bold select1">
+                            <label for="leaguesddl">Select League</label>
+                            <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
+                                <option value="select a Location" selected disabled>Please select a League</option>
+                            </select>
                         </div>
-                        <!--Cards with Information-->
-                        <div class="hidden cards" id="serviceCard">
-                          <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title cardsTitle font-weight-bold text-center" id="cardTitle">&nbsp;</h5>
-                              <p class="card-text" id="cardText1">&nbsp;</p>
-                              <p class="card-text" id="cardText2">&nbsp;</p>
-                              <p class="card-text" id="cardText3">&nbsp;</p>
-                              <p class="card-text" id="cardText4">&nbsp;</p>
-                              <p class="card-text" id="cardText5">&nbsp;</p>
-                              <p class="card-text" id="cardText6">&nbsp;</p>
-                            </div>
-                            <img class=" text-center card-img-bottom " src="#" alt="#" id="cardText4" />
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>   
-        
-    </div>
-
+                    </div>
+                    <div class="text-center align-middle">
+                        <button id="showAll" type="button" class="btn btn-primary">Show All </button>
+                    </div>
+                    <!--Table-->
+                    <div>
+                        <table class=" table-striped container table table-sm col-12 table-bordered mt-5">
+                            <thead id="teamHeader" class="font-weight-bold bg-dark text-white">
+                            </thead>
+                            <tbody id="teamTable">
+                            </tbody>
+                        </table>
+                        <!--End of Table-->
+                    </div>
+                </section>
+            </form>
+        </div>
+    </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
