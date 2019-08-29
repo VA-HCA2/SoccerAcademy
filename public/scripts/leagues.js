@@ -1,26 +1,13 @@
 // Onload function
 "use strict";
 $(function () {
-  let objs;
+
   let leaguesObjs;
-  // get data from JSON file
-  $.getJSON('/api/leagues', function (data) {
-    objs = data;
-    // Create my dropdown information from api/leagues
-    for (let i = 0; i < objs.length; i++) {
-      let text = objs[i].Name;
-      let value = objs[i].Code;
-      let mydropDownOption = $("<option>",
-        {
-          value: value,
-          text: text
-        });
-      mydropDownOption.appendTo("#leaguesddl");
-    }
-  });
+  // Call function to get data from JSON file to populate dropdown list of leagues
+    getJSON();
+
   // Onchange function
-  $("#leaguesddl").change(function () 
-  {
+  $("#leaguesddl").change(function () {
     // Clear my table header and table body when user selects another league
     $("#teamTable").empty();
     $("#teamHeader").empty();
@@ -52,7 +39,7 @@ $(function () {
       leaguesObjs = data;
 
       createHeader()
-
+      
       for (let i = 0; i < leaguesObjs.length; i++) {
 
         //Table Body
