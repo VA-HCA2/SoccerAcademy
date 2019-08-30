@@ -4,7 +4,7 @@ $(function () {
 
   let leaguesObjs;
   // Call function to get data from JSON file to populate dropdown list of leagues
-    getJSON();
+    loadLeagueIntoDropdown("leaguesddl");
 
   // Onchange function
   $("#leaguesddl").change(function () {

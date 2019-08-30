@@ -12,8 +12,15 @@ $(function () {
     $("#error").hide();
     // On Click Function 
     $("#registerBtn").on("click", function () {
+
         $("#error").show();
-        validateForm();
+
+        let isvalidate= validateForm();
+
+        if (isvalidate == false)
+        {
+            return ;
+        }
         // If data is entered post in the students table  
         $.post(`/api/teams/${teamId}/members`, $("#newPlayer").serialize(), function (data) {
             window.location.href = "details.html?TeamId=" + teamId;

@@ -1,9 +1,10 @@
 "use strict";
 // Function to populate dropdown for leagues 
-function getJSON(){
+let objs;
+function loadLeagueIntoDropdown(dropdownid){
     $.getJSON('/api/leagues', function (data)
     {
-    let objs;
+   
       objs = data;
       // Create my dropdown information from api/leagues
       for (let i = 0; i < objs.length; i++) {
@@ -14,16 +15,18 @@ function getJSON(){
             value: value,
             text: text
           });
-        mydropDownOption.appendTo("#leaguesddl");
+        mydropDownOption.appendTo("#"+dropdownid);
       }
     });
 }
 
-// Function to Validate forms
+// Function to Validate data for Register Form 
 function validateForm() {
     let pattern = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+    let phonepattern= /^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/
     let errMsg = [];
 
+    
     if ($("#memberName").val().trim() == "") {
         errMsg[errMsg.length] = "Name is required";
     }
@@ -31,7 +34,6 @@ function validateForm() {
     if ($("#contactName").val().trim() == "") {
         errMsg[errMsg.length] = "Contact name is required";
     }
-
 
     if ($("#email").val().trim() == "") {
         errMsg[errMsg.length] = "Email is required";
@@ -42,6 +44,9 @@ function validateForm() {
 
     if ($("#phone").val().trim() == "") {
         errMsg[errMsg.length] = "Phone Number is required";
+    }
+    else if (!phonepattern.test($("#phone").val().trim())){
+        errMsg[errMsg.length] = ("Phone enter a valid Phone Number");
     }
 
     if ($("#age").val().trim() == "") {
@@ -56,5 +61,7 @@ function validateForm() {
     for (let i = 0; i < errMsg.length; i++) {
         $("<li>" + errMsg[i] + "</li>").appendTo("#error");
     }
+   
     return false;
 }
+

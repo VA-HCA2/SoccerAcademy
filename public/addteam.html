@@ -31,10 +31,12 @@
                     <form class="form " method="GET" id="newTeam" autocomplete="off">
                         <!--Dropdown to leagues-->
                         <div class="form-group row">
-                                <label for="leaguesddl" class="col-sm-5 col-form-label">Select League   </label>
-                                <select class="custom-select col-sm-6" id="leaguesddl" name="leaguecode">
-                                    <option value="select a Location" selected disabled>Choose one</option>
-                                </select>
+                                <label for="leaguesddl" class="col-sm-4 col-form-label ">Select League   </label>
+                                <div class="col-sm-8">
+                                    <select class="custom-select " id="leaguesddl" name="leaguecode">
+                                        <option value="select a Location" selected disabled>Choose one</option>
+                                    </select>
+                                </div>
                             </div>
                         <!-- End of dropdown-->
 
@@ -86,23 +88,28 @@
                             <label for="Age" class="col-sm-4 col-form-label">Team Gender:</label>
                             <!-- Radio Buttons for Gender-->
                             <div class="d-block">
-                                <div class="custom-control custom-radio">
+                                <div class="custom-control custom-radio malediv">
                                     <input class="custom-control-input" type="radio" name="teamgender" id="male"
                                         value="Male" checked>
                                     <label class="custom-control-label" for="male">Male</label>
                                 </div>
-                                <div class="custom-control custom-radio">
+                                <div class="custom-control custom-radio femalediv">
                                     <input class="custom-control-input" type="radio" name="teamgender" id="female"
                                         value="Female">
                                     <label class="custom-control-label" for="female">Female</label>
                                 </div>
+                                <div class="custom-control custom-radio anydiv">
+                                        <input class="custom-control-input" type="radio" name="teamgender" id="any"
+                                            value="Any">
+                                        <label class="custom-control-label" for="any">Any</label>
+                                    </div>
                             </div>
                         </div>
                         <div class="text-center">
                             <button id="addBtn" class="btn btn btn-primary" type="button">Add New Team</button>
                             <button type="reset" class="btn btn-danger">Reset</button>
                         </div>
-                        <ul class="alert alert-danger my-2 text-center" id="error" role="alert"></ul>
+                        <ul class="alert alert-danger my-2 text-center" id="errorTeam" role="alert"></ul>
                     </form>
                 </div>
             </div>
