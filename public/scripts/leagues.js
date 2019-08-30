@@ -1,6 +1,9 @@
 // Onload function
 "use strict";
 $(function () {
+  $(".leaguesdiv").hide()
+  $(".teamsdiv").hide()
+  $(".genderdiv").hide()
 
   let leaguesObjs;
   // Call function to get data from JSON file to populate dropdown list of leagues
@@ -8,6 +11,7 @@ $(function () {
 
   // Onchange function
   $("#leaguesddl").change(function () {
+ 
     // Clear my table header and table body when user selects another league
     $("#teamTable").empty();
     $("#teamHeader").empty();

@@ -27,32 +27,72 @@
             <!--Start of Form-->
             <form class="form " autocomplete="off" method="GET">
                 <section>
-                    <!-- Leagues ropdowns-->
-                    <div class=" mb-3">
-                        <div class=" font-weight-bold select1">
-                            <label for="leaguesddl">Select League</label>
-                            <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
-                                <option value="select a Location" selected disabled>Please select a League</option>
-                            </select>
-                        </div>
-                    </div>
+                    <!-- Radio buttons for search-->
                     <div class="text-center align-middle">
-                        <button id="showAll" type="button" class="btn btn-primary">Show All </button>
-                        <a href="addteam.html" class="btn btn-success active" role="button"
-                        aria-pressed="true">Add a Team</a>
+                        <label class="font-weight-bold select1">Filter Teams</label>
+                        <!--Radio Buttons-->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="searchLeagues" name="optionBtn" class="custom-control-input"
+                                checked>
+                            <label class="custom-control-label " for="searchLeagues">Search by Leagues</label>
+                        </div>
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="searchTeams" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label" for="searchTeams">Search by Teams</label>
+                        </div>
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="searchAges" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label" for="searchAges">Search by Gender</label>
+                        </div>
+                        <br>
+                        <!--Search Button-->
+                        <button id="showAll" type="button" class="btn btn-primary mt-3">Show All </button>
+                        <a href="addteam.html" class="btn btn-warning active mt-3" role="button" aria-pressed="true">Add
+                            a
+                            Team</a>
                     </div>
-                    <!--Table-->
-                    <div>
-                        <table class=" table-striped container table table-sm col-12 table-bordered mt-5">
-                            <thead id="teamHeader" class="font-weight-bold bg-dark text-white">
-                            </thead>
-                            <tbody id="teamTable">
-                            </tbody>
-                        </table>
-                        <!--End of Table-->
-                    </div>
-                </section>
-            </form>
+        </div>
+        <!--  Search by Leagues dropdowns-->
+        <div class=" col-md-5 mx-auto ">
+            <div class=" font-weight-bold select1 leaguesdiv">
+                <label for="leaguesddl">Select League</label>
+                <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
+                    <option value="select a Location" selected disabled>Please select a League</option>
+                </select>
+            </div>
+        </div>
+
+        <!--  Search by Teams dropdowns-->
+        <div class=" col-md-5 mx-auto">
+            <div class=" font-weight-bold select1 teamsdiv">
+                <label for="leaguesddl">Select Teams</label>
+                <select class="custom-select d-block w-100 " id="teamddl" name="teamsddl">
+                    <option value="select a Location" selected disabled>Please select a Team</option>
+                </select>
+            </div>
+        </div>
+
+        <!--  Search by Ages dropdowns-->
+        <div class=" col-md-5 mx-auto">
+            <div class=" font-weight-bold select1 genderdiv">
+                <label for="leaguesddl">Select Gender</label>
+                <select class="custom-select d-block w-100 " id="genderddl" name="genderddl">
+                    <option value="select a Location" selected disabled>Please select one</option>
+                </select>
+            </div>
+        </div>
+        <!--Table-->
+        <div>
+            <table class=" table-striped container table table-sm col-8 table-bordered mt-5">
+                <thead id="teamHeader" class="font-weight-bold bg-dark text-white">
+                </thead>
+                <tbody id="teamTable">
+                </tbody>
+            </table>
+            <!--End of Table-->
+        </div>
+        </section>
+        </form>
         </div>
     </main>
     <!-- Optional JavaScript -->
