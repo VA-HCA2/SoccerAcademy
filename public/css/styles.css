@@ -10,3 +10,7 @@ h1, h5 {
 li {
   list-style-type: none;
 }
+
+.hide{
+  display: none
+}

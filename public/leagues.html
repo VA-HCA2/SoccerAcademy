@@ -32,8 +32,7 @@
                         <label class="font-weight-bold select1">Filter Teams</label>
                         <!--Radio Buttons-->
                         <div class="custom-control custom-radio">
-                            <input type="radio" id="searchLeagues" name="optionBtn" class="custom-control-input"
-                                checked>
+                            <input type="radio" id="searchLeagues" name="optionBtn" class="custom-control-input">
                             <label class="custom-control-label " for="searchLeagues">Search by Leagues</label>
                         </div>
                         <div class="custom-control custom-radio ">
@@ -41,8 +40,8 @@
                             <label class="custom-control-label" for="searchTeams">Search by Teams</label>
                         </div>
                         <div class="custom-control custom-radio ">
-                            <input type="radio" id="searchAges" name="optionBtn" class="custom-control-input">
-                            <label class="custom-control-label" for="searchAges">Search by Gender</label>
+                            <input type="radio" id="searchGender" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label" for="searchGender">Search by Gender</label>
                         </div>
                         <br>
                         <!--Search Button-->
@@ -54,7 +53,7 @@
         </div>
         <!--  Search by Leagues dropdowns-->
         <div class=" col-md-5 mx-auto ">
-            <div class=" font-weight-bold select1 leaguesdiv">
+            <div class=" font-weight-bold select1 leaguesdiv hide">
                 <label for="leaguesddl">Select League</label>
                 <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
                     <option value="select a Location" selected disabled>Please select a League</option>
@@ -64,9 +63,9 @@
 
         <!--  Search by Teams dropdowns-->
         <div class=" col-md-5 mx-auto">
-            <div class=" font-weight-bold select1 teamsdiv">
+            <div class=" font-weight-bold select1 teamsdiv hide">
                 <label for="leaguesddl">Select Teams</label>
-                <select class="custom-select d-block w-100 " id="teamddl" name="teamsddl">
+                <select class="custom-select d-block w-100 " id="teamddl" name="teamddl">
                     <option value="select a Location" selected disabled>Please select a Team</option>
                 </select>
             </div>
@@ -74,8 +73,8 @@
 
         <!--  Search by Ages dropdowns-->
         <div class=" col-md-5 mx-auto">
-            <div class=" font-weight-bold select1 genderdiv">
-                <label for="leaguesddl">Select Gender</label>
+            <div class=" font-weight-bold select1 genderdiv hide">
+                <label for="genderddl">Select Gender</label>
                 <select class="custom-select d-block w-100 " id="genderddl" name="genderddl">
                     <option value="select a Location" selected disabled>Please select one</option>
                 </select>

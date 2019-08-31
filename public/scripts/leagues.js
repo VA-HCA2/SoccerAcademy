@@ -1,15 +1,40 @@
 // Onload function
 "use strict";
 $(function () {
-  $(".leaguesdiv").hide()
-  $(".teamsdiv").hide()
-  $(".genderdiv").hide()
-
   let leaguesObjs;
+
+ getLeagues();
+ showAllFunction();
+ getTeams();
+ 
+  $("#searchLeagues").on("click",function(){
+
+    $(".leaguesdiv").show();
+    $(".teamsdiv").hide();
+    $(".genderdiv").hide();
+  });
+
+  $("#searchTeams").on("click",function(){
+    $(".teamsdiv").show()
+    $(".leaguesdiv").hide()
+    $(".genderdiv").hide()
+    
+  });
+
+  $("#searchGender").on("click",function(){
+    $(".genderdiv").show()
+    $(".leaguesdiv").hide()
+    $(".teamsdiv").hide()
+  })
+
+});
+
+function getLeagues(leaguesObjs){
+ 
   // Call function to get data from JSON file to populate dropdown list of leagues
     loadLeagueIntoDropdown("leaguesddl");
 
-  // Onchange function
+  // Onchange function to filter teams by leagues 
   $("#leaguesddl").change(function () {
  
     // Clear my table header and table body when user selects another league
@@ -32,7 +57,57 @@ $(function () {
       }//End of body table
     }); // end of get JSON
   }); //End of my onchange function  
+}
 
+function getTeams(leaguesObjs){
+  let obj;
+
+  // dropdown for teams 
+  $.getJSON("/api/teams", function(data){
+    obj = data;
+      // Create my dropdown information from api/leagues
+      for (let i = 0; i < obj.length; i++) {
+       let text = obj[i].TeamName;
+        let value = obj[i].TeamId;
+        let teamddl = $("<option>",
+          {
+            value: value,
+            text: text
+          });
+        teamddl.appendTo("#teamddl");
+      }
+  });
+
+ 
+  $("#teamddl").change(function () {
+
+    $("#teamTable").empty();
+    $("#teamHeader").empty();
+
+  $.getJSON("/api/teams/" + $("#teamddl").val(), function (data) {
+
+    leaguesObjs = data;
+
+    // Call my create a header function
+    createHeader()
+
+    for (let i = 0; i < leaguesObjs.length; i++) {
+
+      //Table Body
+      let str2 = "<tr><td>" + leaguesObjs[i].TeamName + "</td><td>" + leaguesObjs[i].ManagerName + "</td><td>"
+        + leaguesObjs[i].ManagerPhone + "</td></tr>";
+
+        $("#teamTable").append(str2);
+
+    }//End of body table
+  
+  }); // end of get JSON
+});
+}
+
+
+// Show all function 
+ function showAllFunction(leaguesObjs){
   $("#showAll").on("click", function () {
     // Clear my table header and table 
     $("#teamTable").empty();
@@ -56,7 +131,8 @@ $(function () {
       }//End of body table
     }); // end of get JSON
   });
-});
+ }
+
 
 // Function create a Header
 function createHeader() {
