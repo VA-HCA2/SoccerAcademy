@@ -38,6 +38,12 @@ li {
   color:rgb(51, 51, 116)
 }
 
+/*Footer*/
+
+.footer {
+  font-size: 11px;
+  font-family: sans-serif
+}
 /*----CAROUSEL---*/
 /* Applies for the images in the carousel*/
 .imgs{
@@ -79,6 +85,13 @@ li {
   color: black;
   font-size: 30px
 }
+
+.para{
+  color:#ddd;
+  background-color: rgb(139, 165, 187);
+  text-align:center;
+  padding:50px 80px;
+  text-align: justify}
 
  .bgimg-1, .bgimg-2,.bgimg-3 {
   position: relative;
