@@ -9,50 +9,93 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Soccer Academy</title>
 </head>
 
 <body>
-    <nav
-        class=" font-weight-bold d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none" href="index.html">Soccer Academy</a>
-        <div class="my-2 my-md-0 mr-md ">
-            <a class="p-2 text-success" href="index.html">Home</a>
-            <a class="p-2 text-success" href="Leagues.html">Leagues</a>
-        </div>
-    </nav>
+    <!-- Navbar -->
+    <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
+            <img src="images/logo.jpg" alt="logo">
+            <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.html">Soccer
+                Academy</a>
+            <div class="my-2 my-md-0 mr-md ">
+                <a class="p-3 navLinks" href="index.html">Home</a>
+                <a class="p-3 navLinks" href="Leagues.html">Leagues</a>
+            </div>
+        </nav>
     <main>
         <div class="container">
             <!--Start of Form-->
             <form class="form " autocomplete="off" method="GET">
                 <section>
-                    <!-- Leagues ropdowns-->
-                    <div class=" mb-3">
-                        <div class=" font-weight-bold select1">
-                            <label for="leaguesddl">Select League</label>
-                            <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
-                                <option value="select a Location" selected disabled>Please select a League</option>
-                            </select>
-                        </div>
-                    </div>
+                    <!-- Radio buttons for search-->
                     <div class="text-center align-middle">
-                        <button id="showAll" type="button" class="btn btn-primary">Show All </button>
-                        <a href="addteam.html" class="btn btn-success active" role="button"
-                        aria-pressed="true">Add a Team</a>
+                        <label class="font-weight-bold select1">Filter Teams</label>
+                        <!--Radio Buttons-->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="searchLeagues" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label " for="searchLeagues">Search by Leagues</label>
+                        </div>
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="searchTeams" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label" for="searchTeams">Search by Teams</label>
+                        </div>
+                        <div class="custom-control custom-radio ">
+                            <input type="radio" id="searchGender" name="optionBtn" class="custom-control-input">
+                            <label class="custom-control-label" for="searchGender">Search by Gender</label>
+                        </div>
+                        <br>
+                        <!--Search Button-->
+                        <button id="showAll" type="button" class="btn btn-primary mt-3">Show All </button>
+                        <a href="addteam.html" class="btn btn-warning active mt-3" role="button" aria-pressed="true">Add
+                            a
+                            Team</a>
                     </div>
-                    <!--Table-->
-                    <div>
-                        <table class=" table-striped container table table-sm col-12 table-bordered mt-5">
-                            <thead id="teamHeader" class="font-weight-bold bg-dark text-white">
-                            </thead>
-                            <tbody id="teamTable">
-                            </tbody>
-                        </table>
-                        <!--End of Table-->
-                    </div>
-                </section>
-            </form>
+        </div>
+        <!--  Search by Leagues dropdowns-->
+        <div class=" col-md-5 mx-auto ">
+            <div class=" font-weight-bold select1 leaguesdiv hide">
+                <label for="leaguesddl">Select League</label>
+                <select class="custom-select d-block w-100 " id="leaguesddl" name="leaguesddl">
+                    <option value="select a Location" selected disabled>Please select a League</option>
+                </select>
+            </div>
+        </div>
+
+        <!--  Search by Teams dropdowns-->
+        <div class=" col-md-5 mx-auto">
+            <div class=" font-weight-bold select1 teamsdiv hide">
+                <label for="leaguesddl">Select Teams</label>
+                <select class="custom-select d-block w-100 " id="teamddl" name="teamddl">
+                    <option value="select a Location" selected disabled>Please select a Team</option>
+                </select>
+            </div>
+        </div>
+
+        <!--  Search by Ages dropdowns-->
+        <div class=" col-md-5 mx-auto">
+            <div class=" font-weight-bold select1 genderdiv hide">
+                <label for="genderddl">Select Gender</label>
+                <select class="custom-select d-block w-100 " id="genderddl" name="genderddl">
+                    <option value="select a Location" selected disabled>Please select one</option>
+                </select>
+            </div>
+        </div>
+        <!--Table-->
+        <div>
+            <table class=" table-striped container table table-sm col-8 table-bordered mt-5">
+                <thead id="teamHeader" class="font-weight-bold bg-dark text-white">
+                </thead>
+                <tbody id="teamTable">
+                </tbody>
+            </table>
+            <!--End of Table-->
+        </div>
+        </section>
+        </form>
         </div>
     </main>
     <!-- Optional JavaScript -->
