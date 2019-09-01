@@ -1,16 +1,131 @@
-h1, h5 {
+ h1, h5 {
   font-size: 20px
 }
 
 #dropdownmenu {
   margin-left: 250px;
   width: 225px;
-}
+} 
 
 li {
   list-style-type: none;
-}
+} 
 
 .hide{
   display: none
+} 
+
+/*This style applies to my home page*/ 
+.home{
+  margin: 65px;
+} 
+
+/* Nav style */
+ nav{
+   font-family: 'Permanent Marker', cursive;
+ }
+.navLinks{
+  color: rgb(51, 51, 116);
+  font-size: 18px;
+
 }
+ .title{
+  font-size: 30px;
+  color: rgb(51, 51, 116);
+ }
+
+ a:hover {
+  color:rgb(51, 51, 116)
+}
+
+/*----CAROUSEL---*/
+/* Applies for the images in the carousel*/
+.imgs{
+  width: 33px
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 30rem
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.featurette-divider {
+  margin: 5rem 0; 
+}
+.leaguePara,.leaguePara2{
+  font-size: 30px;
+  font-family: 'Abril Fatface', cursive;
+  color: white
+}
+.leaguePara2{
+  font-size: 65px;
+}
+/* End of styles for carousel */
+
+
+/*Applies to parallax */
+
+
+#parallaxTitle,#parallaxTitle2,#parallaxTitle3{
+  background-color:transparent; 
+  font-size:25px;
+  color: black;
+  font-size: 30px
+}
+
+ .bgimg-1, .bgimg-2,.bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+} 
+ 
+.bgimg-1 {
+  background-image: url("../images/homeimg2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-2 {
+  background-image: url("../images/homeimg4.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("../images/homeimg3.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+} 
+
+ .caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+} 
+
+ h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+} 
+

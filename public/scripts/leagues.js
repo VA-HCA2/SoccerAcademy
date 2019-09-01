@@ -141,8 +141,6 @@ function searchByGender(leaguesObjs,obj){
 
     }); // end of get JSON
   });
-
- 
 }
 
 
