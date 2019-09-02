@@ -37,10 +37,12 @@ function teamDetails(obj) {
 
 // Table for Players
 function playersDetails(obj, TeamId) {
+    $('[data-toggle="popover"]').popover();
     //Table header
     let playersHeader = `<tr>
     <th>Player Name</th>
     <th>Email Address</th>
+    <th>More Info</th>
     <th>Action</th></tr>`;
     $("#playersHeader").append(playersHeader);
     // End of table header
@@ -54,7 +56,9 @@ function playersDetails(obj, TeamId) {
 
         <td> ${obj.Members[i].MemberName}</td>
         <td> ${obj.Members[i].Email}</td>
-        <td> <a href='${uri}'>Unregister</a></td>
+        <td><button type="button" class="btn btn-outline-info btn-sm">Click Here</button>
+        </td>
+        <td> <a href='${uri}' type='button' class="btn btn-outline-danger btn-sm">Unregister</a></td>
         </tr>`;
         $("#playersTable").append(players);
     }
@@ -64,3 +68,5 @@ function playersDetails(obj, TeamId) {
         $("#studentsHide").hide();
     }
 }
+
+

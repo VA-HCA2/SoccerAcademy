@@ -10,21 +10,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>Soccer Academy</title>
 </head>
 
 <body>
-    <nav
-        class=" font-weight-bold d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none" href="index.html">Soccer Academy</a>
+    <!-- Navbar -->
+    <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
+        <img src="images/logo.jpg" alt="logo">
+        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.html">Soccer
+            Academy</a>
         <div class="my-2 my-md-0 mr-md ">
-            <a class="p-2 text-success" href="index.html">Home</a>
-            <a class="p-2 text-success" href="Leagues.html">Leagues</a>
+            <a class="p-3 navLinks" href="index.html">Home</a>
+            <a class="p-3 navLinks" href="Leagues.html">Leagues</a>
         </div>
     </nav>
     <main>
             <div class="text-center mt-5">
-                    <h1>Team Details</h1>
+                    <h1 class="filterTitle ">Team Details</h1>
                 </div>
         
                 <div class="container">
@@ -39,12 +43,13 @@
                         </div>
     
                         <div class="col-12 text-center">
-                            <a href="" id="registerButton" class="btn btn-primary btn-lg">Register </a>
+                            <a href="" id="registerButton" class="btn btn-primary ">Register </a>
+                            <a href="leagues.html" class="btn btn-info active " role="button" aria-pressed="true">Return</a>
                         </div>
                         <div id="studentsHide">
                             <div class="  p-md-4 text-black ">
                                 <div class="col-md-12 px-0">
-                                    <h1 class="font-italic text-center "> Players Registered</h1>
+                                    <h2 class="font-italic text-center filterTitle mt-5"> Players Registered</h2>
                                 </div>
                             </div>
                             <!--Table for Players-->
