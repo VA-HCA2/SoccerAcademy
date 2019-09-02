@@ -1,27 +1,11 @@
- h1, h5 {
-  font-size: 20px
-}
-
-#dropdownmenu {
-  margin-left: 250px;
-  width: 225px;
-} 
-
-li {
-  list-style-type: none;
-} 
-
-.hide{
-  display: none
-} 
 
 /*This style applies to my home page*/ 
 .home{
-  margin: 65px;
+  margin: 60px;
 } 
 
 /* Nav style */
- nav{
+ nav,.filterTitle{
    font-family: 'Permanent Marker', cursive;
  }
 .navLinks{
@@ -52,19 +36,21 @@ li {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 30rem
+  height: 30rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 28rem;
+  border-radius: 40px
 }
 
 .featurette-divider {
   margin: 5rem 0; 
 }
+
 .leaguePara,.leaguePara2{
   font-size: 30px;
   font-family: 'Abril Fatface', cursive;
@@ -77,7 +63,6 @@ li {
 
 
 /*Applies to parallax */
-
 
 #parallaxTitle,#parallaxTitle2,#parallaxTitle3{
   background-color:transparent; 
@@ -100,7 +85,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+ 
 } 
  
 .bgimg-1 {
@@ -142,3 +127,34 @@ li {
   color: #111;
 } 
 
+/* Border for forms*/
+.formBorder{
+  padding: 2%;
+  margin-top: 100px;
+  border-radius: 25px;
+  border: 3px solid rgb(51, 69, 90);
+  background-color: white;
+  width: 720px; 
+}
+
+/*Titles on every page */
+.filterTitle{
+  font-size: 35px
+}
+
+/*Dropdown Menus*/
+
+#dropdownmenu {
+  margin-left: 250px;
+  width: 225px;
+} 
+
+/* take out decoration from errors arrays */
+
+li {
+  list-style-type: none;
+} 
+
+.hide{
+  display: none
+} 

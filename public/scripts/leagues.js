@@ -104,7 +104,6 @@ function searchByGender(leaguesObjs,obj){
   // dropdown for teams 
   $.getJSON("/api/teams", function(data){
     obj = data;
-    var code = {};
  
       // Create my dropdown information from api/leagues
       for (let i = 0; i < obj.length; i++) {
