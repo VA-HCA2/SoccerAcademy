@@ -21,7 +21,7 @@ li {
 } 
 
 /* Nav style */
- nav{
+ nav,.filterTitle{
    font-family: 'Permanent Marker', cursive;
  }
 .navLinks{
@@ -52,14 +52,15 @@ li {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 30rem
+  height: 30rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 28rem;
+  border-radius: 40px
 }
 
 .featurette-divider {
@@ -95,7 +96,7 @@ li {
 
  .bgimg-1, .bgimg-2,.bgimg-3 {
   position: relative;
-  opacity: 0.65;
+  opacity: 0.81;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,3 +143,18 @@ li {
   color: #111;
 } 
 
+/* Border for forms*/
+.formBorder{
+  padding: 2%;
+  margin-top: 100px;
+  border-radius: 25px;
+  border: 3px solid rgb(51, 69, 90);
+  background-color: white;
+  width: 720px;
+  margin-left: 200px
+ 
+}
+
+.filterTitle{
+  font-size: 30px
+}
