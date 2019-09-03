@@ -27,5 +27,15 @@ $(function () {
         })
 
     }); // end of on click
+
+    $("#resetBtn").on("click", function () {
+        
+        $("#teamName").val(data.TeamName);
+    });
+
+    $("#returnBtn").on("click", function () {
+
+        window.location.href = "details.html?TeamId=" + teamId;
+    });
 }); // end of ready fuction
 

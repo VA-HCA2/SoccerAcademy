@@ -194,6 +194,8 @@ app.get("/details.html", function (req, res) {
 app.get("/addteam.html", function (req, res) {
     res.sendFile( __dirname + "/public/" + "addteam.html" ); 
 })
+
+
 // TODO:  YOU WILL NEED TO ADD MORE CALLS TO app.get() FOR EACH PAGE
 //        YOU END UP BUILDING
 
@@ -385,6 +387,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     // make sure new values for max members, min/max age, or gender
     // don't conflict with members already on team
 
+    console.log("validating max team members")
     if ( Number(req.body.maxteammembers) < match.Members.length )
     {
         res.status(409).send("Team size too small based on current roster");
@@ -392,6 +395,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
     match.MaxTeamMembers = Number(req.body.maxteammembers);
 
+    console.log("validating min age")
     if ( Number(req.body.minmemberage) > getMinAgeOfMember(match) )
     {
         res.status(409).send("Minimum age is greater than current member on team");
@@ -399,6 +403,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
     match.MinMemberAge = Number(req.body.minmemberage);
 
+    console.log("validating max age")
     if ( Number(req.body.maxmemberage) < getMaxAgeOfMember(match) )
     {
         res.status(409).send("Maximum age is less than current member on team");
@@ -406,6 +411,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
     match.MaxMemberAge = Number(req.body.maxmemberage);
 
+    console.log("validating gender")
     if ( isThereAnyGenderChangeConflicts(req.body.teamgender, match) )
     {
         res.status(409).send("Gender change conflicts with current member on team");

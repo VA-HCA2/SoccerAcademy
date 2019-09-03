@@ -66,16 +66,16 @@
 
 #parallaxTitle,#parallaxTitle2,#parallaxTitle3{
   background-color:transparent; 
-  font-size:25px;
   color: black;
   font-size: 30px
 }
 
 .para{
-  color:#ddd;
+  color:rgb(0, 0, 0);
   background-color: rgb(139, 165, 187);
+  font-family: 'Libre Franklin', sans-serif;
   text-align:center;
-  padding:50px 80px;
+  padding:35px 80px;
   text-align: justify}
 
  .bgimg-1, .bgimg-2,.bgimg-3 {
@@ -158,3 +158,60 @@ li {
 .hide{
   display: none
 } 
+
+/* Media query for extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+
+  .home{
+    margin: 30px;
+  } 
+  nav{
+    font-size: 10px
+  }
+
+  #myCarousel{
+    display: none
+  }
+  
+  .formBorder{
+    width: 339px
+  }
+  
+  #parallaxTitle,#parallaxTitle2,#parallaxTitle3{
+    font-size: 15px
+  }
+  
+  .para{
+    padding:10px 10px;
+    text-align: justify}
+  
+   .bgimg-1, .bgimg-2,.bgimg-3 {
+    opacity: 0.90;
+  } 
+   
+  .bgimg-1,.bgimg-2,.bgimg-3{
+    min-height: 200px;
+  }
+  
+   .caption span.border {
+    letter-spacing: 2px;
+  } 
+
+  .filterTitle{
+    font-size: 20px
+  }
+}
+
+/* Media query for ipad */
+
+@media only screen and (max-width: 1024px) { 
+  #myCarousel{
+    display: none
+  }
+
+  .caption span.border {
+    letter-spacing: 2px;
+  } 
+
+}
