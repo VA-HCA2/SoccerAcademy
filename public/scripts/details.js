@@ -15,6 +15,10 @@ $(function () {
         });
     });
 
+    $("#moreinfoBtn").on("click", function () {
+        getMoreInfo()
+    });
+
 }); // end of ready fuction
 
 //Table Body
@@ -39,32 +43,64 @@ function playersDetails(obj, TeamId) {
     let playersHeader = `<tr>
     <th>Player Name</th>
     <th>Email Address</th>
-    <th>More Info</th>
+    <th class="text-center">More Info</th>
     <th>Action</th></tr>`;
     $("#playersHeader").append(playersHeader);
     // End of table header
 
     // Loop  thru the array of players
-    for (let i = 0; i < obj.Members.length; i++) {
+    for (let i = 0; i < obj.Members.length; i++)
+    {
         // Table body for students
-        let uri = "deletestudent.html?TeamId=" + TeamId + "&studentName=" + obj.Members[i].MemberName + "&email=" + obj.Members[i].Email;
+        let uri = "deleteplayer.html?TeamId=" + TeamId +"&membername=" + obj.Members[i].MemberName +"&email=" + obj.Members[i].Email+"&TeamName="+obj.TeamName+"&MemberId="+obj.Members[i].MemberId;
         uri = encodeURI(uri);
-        let players = `<tr>
 
+
+        let players = `<tr>
         <td> ${obj.Members[i].MemberName}</td>
         <td> ${obj.Members[i].Email}</td>
-        <td><a href="#" type="button" class="btn btn-outline-info btn-sm" id="modalStudent" data-toggle="modal"
-        data-target="infoStudentmodal">Click Here</a>
+        <td><a href="#"  class="fa fa-info-circle ml-5" id="moreinfo${i}" data-toggle="popover"></a>
         </td>
-        <td> <a href='${uri}' type='button' class="btn btn-outline-danger btn-sm">Unregister</a></td>
+        <td> <a href='${uri}' role='button' class="btn btn-danger btn-sm">Delete</a></td>
         </tr>`;
         $("#playersTable").append(players);
-    }
 
-    // Hide if there are not registered players
-    if (obj.Members.length == "") {
+
+        let popoverContent = `<b>Age: </b>${obj.Members[i].Age}<br><b>Gender: </b>${obj.Members[i].Gender}<br><b>Phone Number: </b>${obj.Members[i].Phone}`
+
+        $("#moreinfo"+i).popover({
+            title:"Player Info",
+            content: popoverContent,
+            html: true,
+            placement: 'right',
+            trigger: 'hover',
+        })
+    
+
+      
+    }
+      // Hide if there are not registered players
+        
+      if (obj.Members.length == "") {
         $("#studentsHide").hide();
     }
 }
 
 
+function getMoreInfo(){
+    let card = $("<div>", {class: "card col-md-4 m-4"});
+    let cardHead = $("<h4>", {text: "Player Information", class:"card-header text-center"})
+    let cardBody = $("<div>", {class: "card-body"});
+    let cardTitle = $("<p>", {text: "\u2022 Max Team Size - " + team.MaxTeamMembers});
+    let cardText1 = $("<p>", {text: "\u2022 Ages " + team.MinMemberAge + "-" + team.MaxMemberAge});
+    let cardText2 = $("<p>", {text: "\u2022 Gender - " + team.TeamGender})
+
+    // Append the body
+    card.append(cardHead)
+        .append(cardBody);
+
+    // Append each tag to the body
+    cardBody.append(cardTitle)
+        .append(cardText1)
+        .append(cardText2)
+}
