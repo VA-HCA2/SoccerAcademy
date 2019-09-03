@@ -53,6 +53,7 @@ function validateForm() {
         errMsg[errMsg.length] = "Age is required";
     }
 
+   
     else if ($("#age").val() <= 0) {
         errMsg[errMsg.length] = "Age must be greater than 0";
     }

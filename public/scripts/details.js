@@ -9,8 +9,6 @@ $(function () {
         obj = data;
         teamDetails(obj)
         playersDetails(obj, TeamId)
-
-
         $("#registerButton").attr("href", "register.html?TeamId=" + TeamId);
         $("#registerButton").on("click", function () {
             document.location.href = "register.html?TeamId=" + TeamId;

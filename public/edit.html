@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.jpg" />
     <title>Soccer Academy</title>
 </head>
 
@@ -37,7 +38,7 @@
                         <div class="form-group row">
                             <label for="teamid" class="col-sm-4 col-form-label font-weight-bold">Team ID:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="teamid" name="teamid" readonly>
+                                <input type="text"  class="form-control" id="teamid" name="teamid" readonly>
                             </div>
                         </div>
 
@@ -58,7 +59,7 @@
                             <label for="managername" class="col-sm-4 col-form-label font-weight-bold"> Manager
                                 Name:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="managername" name="managername" required
+                                <input type="text"  class="form-control" id="managername" name="managername" required
                                     autocomplete="off">
                             </div>
                         </div>
@@ -111,9 +112,8 @@
 
                         <div class="text-center">
                             <button id="editBttn" class="btn btn btn-primary" type="button">Save Changes</button>
-                            <a href="leagues.html" class="btn btn-info active" role="button"
-                                aria-pressed="true">Return</a>
-                            <button type="reset" class="btn btn-danger">Reset</button>
+                            <a href="#" class="btn btn-info active" role="button" aria-pressed="true" id="returnBtn">Go Back</a>
+                            <button type="button" class="btn btn-danger" id="resetBtn" input >Reset</button>
                         </div>
                         <ul class="alert alert-danger my-2 text-center" id="errorTeam" role="alert"></ul>
                     </form>
@@ -132,7 +132,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="scripts/edit.js"></script>
-    <script src="scripts/data.js"></script>
 </body>
 
 </html>
