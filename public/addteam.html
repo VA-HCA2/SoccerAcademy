@@ -93,26 +93,32 @@
                             <!-- Radio Buttons for Gender-->
                             <div class="d-block">
                                 <div class="custom-control custom-radio malediv">
+                                     <div class="col-sm-8">
                                     <input class="custom-control-input" type="radio" name="teamgender" id="male"
-                                        value="Male" checked>
+                                        value="Male" checked>  
                                     <label class="custom-control-label" for="male">Male</label>
+                                    </div>
                                 </div>
                                 <div class="custom-control custom-radio femalediv">
+                                        <div class="col-sm-8">
                                     <input class="custom-control-input" type="radio" name="teamgender" id="female"
                                         value="Female">
                                     <label class="custom-control-label" for="female">Female</label>
                                 </div>
+                                </div>
                                 <div class="custom-control custom-radio anydiv">
+                                        <div class="col-sm-8">
                                         <input class="custom-control-input" type="radio" name="teamgender" id="any"
                                             value="Any">
                                         <label class="custom-control-label" for="any">Any</label>
+                                    </div>
                                     </div>
                             </div>
                         </div>
                         <div class="text-center">
                             <button id="addBtn" class="btn btn btn-primary" type="button">Add New Team</button>
-                            <button type="reset" class="btn btn-danger">Reset</button>
                             <a href="leagues.html" class="btn btn-info active" role="button" aria-pressed="true">Return</a>
+                            <button type="reset" class="btn btn-danger">Reset</button>
                         </div>
                         <ul class="alert alert-danger my-2 text-center" id="errorTeam" role="alert"></ul>
                     </form>

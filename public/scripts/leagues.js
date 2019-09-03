@@ -101,43 +101,32 @@ function getTeams(leaguesObjs){
 
 function searchByGender(leaguesObjs,obj){
 
-  // dropdown for teams 
-  $.getJSON("/api/teams", function(data){
-    obj = data;
- 
-      // Create my dropdown information from api/leagues
-      for (let i = 0; i < obj.length; i++) {
-  
-       let text = obj[i].TeamGender;
-        let value = obj[i].TeamId;
-        let teamddl = $("<option>",
-          {
-            value: value,
-            text: text
-          });         
-        teamddl.appendTo("#genderddl");    
-        }  
-      }); 
-
-     
   $("#genderddl").change(function () {
-  
     $("#teamTable").empty();
     $("#teamHeader").empty();
-
-  $.getJSON("/api/teams/" + $("#genderddl").val(), function (data) {
-
-    leaguesObjs = data;
   
+  $.getJSON("/api/teams/", function (data) {
+
+     let league=data
+   
+
     // Call my create a header function
     createHeader()
+
+     // Create my dropdown information from api/leagues
+     for (let i = 0; i < league.length; i++) {
+  
+      if (leagues[i].Gender == $("#searchGender").val()) {
+
+        leaguesObjs = data;
       //Table Body
         let str = "<tr><td>" + leaguesObjs.TeamName + "</td><td>" + leaguesObjs.ManagerName + "</td><td>"
         + leaguesObjs.ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leaguesObjs.TeamId + ">Details<a>" + "</td><td>"
         + "<a href=edit.html?TeamId=" + leaguesObjs.TeamId + ">Edit<a></td></tr>";
 
         $("#teamTable").append(str);
-
+      }
+    }
     }); // end of get JSON
   });
 }
