@@ -11,6 +11,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/favicon.jpg" />
     <title>Soccer Academy</title>
@@ -28,64 +29,47 @@
         </div>
     </nav>
     <main>
-            <div class="text-center mt-5">
-                    <h1 class="filterTitle ">Team Details</h1>
+        <div class="text-center mt-5">
+            <h1 class="filterTitle ">Team Details</h1>
+        </div>
+
+        <div class="container">
+            <!--Form-->
+            <form class="form " autocomplete="off" method="GET">
+                <!--Table for Course Details-->
+                <div>
+                    <table class=" table-striped container table table-sm col-7 table-bordered mt-5">
+                        <tbody id="detailsTable">
+                        </tbody>
+                    </table>
                 </div>
-        
-                <div class="container">
-                    <!--Form-->
-                    <form class="form " autocomplete="off" method="GET">
-                        <!--Table for Course Details-->
-                        <div>
-                            <table class=" table-striped container table table-sm col-7 table-bordered mt-5">
-                                <tbody id="detailsTable">
-                                </tbody>
-                            </table>
-                        </div>
-    
-                        <div class="col-12 text-center">
-                            <a href="" id="registerButton" class="btn btn-primary ">Register </a>
-                            <a href="leagues.html" class="btn btn-info active " role="button" aria-pressed="true">Go Back</a>
-                        </div>
-                        <div id="studentsHide">
-                            <div class="  p-md-4 text-black ">
-                                <div class="col-md-12 px-0">
-                                    <h2 class="font-italic text-center filterTitle mt-5"> Players Registered</h2>
-                                </div>
-                            </div>
-                            <!--Table for Players-->
-                            <div>
-                                <table class=" table-striped container table table-sm col-7 table-bordered mt-2">
-                                    <thead id="playersHeader" class="font-weight-bold bg-dark text-white">
-                                        </thead>
-                                         <tbody id="playersTable">
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!--Modal-->
-                        <div class="modal" tabindex="-1" role="dialog" id="infoStudentmodal">
-                                <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title">Modal title</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <p>Modal body text goes here.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                    </form>
+
+                <div class="col-12 text-center">
+                    <a href="" id="registerButton" class="btn btn-primary ">Register </a>
+                    <a href="leagues.html" class="btn btn-info active " role="button" aria-pressed="true">Go Back</a>
                 </div>
-        
+                <div id="studentsHide">
+                    <div class="  p-md-4 text-black ">
+                        <div class="col-md-12 px-0">
+                            <h2 class="font-italic text-center filterTitle mt-5"> Players Registered</h2>
+                        </div>
+                    </div>
+                    <!--Table for Players-->
+                    <div>
+                        <table class=" table-striped container table table-sm col-7 table-bordered mt-2">
+                            <thead id="playersHeader" class="font-weight-bold bg-dark text-white">
+                            </thead>
+                            <tbody id="playersTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--PopoverDiv-->
+                
+            </div>
+        </form>
+        </div>
+
     </main>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
