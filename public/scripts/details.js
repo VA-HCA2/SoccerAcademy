@@ -1,3 +1,5 @@
+// This page lists the details on a page. 
+// Author: Vanessa Arce
 "use strict";
 $(function () {
     let urlParams = new URLSearchParams(location.search);
@@ -17,7 +19,7 @@ $(function () {
 
 }); // end of ready fuction
 
-//Table Body
+//Table Body function 
 function teamDetails(obj) {
     let details =
         "<tr><td colspan='2' class='text-center font-weight-bold text-uppercase'>" + obj.TeamName + "</td></tr>" + // Second Row
@@ -33,7 +35,7 @@ function teamDetails(obj) {
 
 }
 
-// Table for Players
+// Table for Players function 
 function playersDetails(obj, TeamId) {
     //Table header
     let playersHeader = `<tr>
@@ -50,8 +52,7 @@ function playersDetails(obj, TeamId) {
         // Table body for students
         let uri = "deleteplayer.html?TeamId=" + TeamId +"&membername=" + obj.Members[i].MemberName +"&email=" + obj.Members[i].Email+"&TeamName="+obj.TeamName+"&MemberId="+obj.Members[i].MemberId;
         uri = encodeURI(uri);
-
-
+        // Create table 
         let players = `<tr>
         <td> ${obj.Members[i].MemberName}</td>
         <td> ${obj.Members[i].Email}</td>
@@ -61,7 +62,7 @@ function playersDetails(obj, TeamId) {
         </tr>`;
         $("#playersTable").append(players);
 
-
+    // Popover 
         let popoverContent = `<b>Age: </b>${obj.Members[i].Age}<br><b>Gender: </b>${obj.Members[i].Gender}<br><b>Phone Number: </b>${obj.Members[i].Phone}`
 
         $("#moreinfo"+i).popover({
@@ -72,8 +73,7 @@ function playersDetails(obj, TeamId) {
             trigger: 'hover',
         })
     }
-      // Hide if there are not registered players
-        
+      // Hide if there are not registered players.
       if (obj.Members.length == "") {
         $("#studentsHide").hide();
     }

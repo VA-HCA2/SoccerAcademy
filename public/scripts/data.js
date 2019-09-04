@@ -1,3 +1,5 @@
+// This script loads leagues in two different pages. On Leagues.js and addteam.js 
+// Author:  Vanessa Arce 
 "use strict";
 // Function to populate dropdown for leagues 
 let objs;

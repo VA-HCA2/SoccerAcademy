@@ -2,19 +2,19 @@
     {
         "Name": "Connecticut Junior League",
         "Code": "CTTeam",
-        "Description": "This league consists of teams of Boys",
+        "Description": "This league is designated for male all ages.",
         "Gender": "Male"
     },
     {
         "Name": "Women Texas Soccer League",
         "Code": "TXTeam",
-        "Description": "This league consists of teams of Girls",
+        "Description": "This league is designated for female all ages.",
         "Gender":"Female"
     },
     {
         "Name": "International Soccer League",
         "Code": "IntLeague",
-        "Description": "This league consists of teams of boys or girls",
+        "Description": "This league is designated for male and female of all ages.",
         "Gender":"Any"
     }
 ]

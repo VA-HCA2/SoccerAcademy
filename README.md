@@ -2,10 +2,10 @@
 
 - The purpose of this page is to help users create and manage soccer teams, including registering members for a team, creating new teams, editing existing teams and more.
 
-+ This webiste consists of three leagues :
-    + Connecticut Junior League - This league is designed for male all ages. 
-    + Women Texas Soccer League - This league is desigend for female all ages.
-    + International Soccer League - This league is designed for male and female of all ages. 
++ This website consists of three leagues:
+    + Connecticut Junior League - This league is designated for male all ages. 
+    + Women Texas Soccer League - This league is designated for female all ages.
+    + International Soccer League - This league is designated for male and female of all ages. 
 
 ### Features
 
@@ -31,7 +31,6 @@
 
 ### Page Navigation
 - Enter http://localhost:8081/  in the browser to navigate to the page.
-- Index.html is a  single page applicaion (SPA) where the user can find : Home and Services page.
 
 ### Main page of Soccer Academy
 ![Soccer Academy](public/images/indexSnippet.PNG?raw=true "Socccer Academy")
