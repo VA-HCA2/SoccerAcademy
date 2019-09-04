@@ -15,17 +15,18 @@
     <link rel="icon" type="image/png" href="images/favicon.jpg" />
     <title>Soccer Academy</title>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
-    <img src="images/logo.jpg" alt="logo">
-    <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.html">Soccer
-        Academy</a>
-    <div class="my-2 my-md-0 mr-md ">
-        <a class="p-3 navLinks" href="index.html">Home</a>
-        <a class="p-3 navLinks" href="Leagues.html">Leagues</a>
-    </div>
-</nav>
+    <!-- Navbar -->
+    <nav class=" font-weight-bold d-flex  align-items-center px-md-2 mb-4 bg-white border-bottom shadow-sm ">
+        <img src="images/logo.jpg" alt="logo">
+        <a class="title my-0 mr-md-auto font-weight-normal text-decoration-none title" href="index.html">Soccer
+            Academy</a>
+        <div class="my-2 my-md-0 mr-md ">
+            <a class="p-3 navLinks" href="index.html">Home</a>
+            <a class="p-3 navLinks" href="Leagues.html">Leagues</a>
+        </div>
+    </nav>
     <main>
         <!--Form-->
         <section class="container col-md-5 formBorder mt-2">
@@ -36,89 +37,102 @@
                     <form class="form " method="GET" id="newTeam" autocomplete="off">
                         <!--Dropdown to leagues-->
                         <div class="form-group row">
-                                <label for="leaguesddl" class="col-sm-4 col-form-label font-weight-bold">Select League   </label>
-                                <div class="col-sm-8">
-                                    <select class="custom-select " id="leaguesddl" name="leaguecode" autofocus>
-                                        <option value="select a Location" selected disabled>Choose one</option>
-                                    </select>
-                                </div>
+                            <label for="leaguesddl" class="col-sm-4 col-form-label font-weight-bold">Select League
+                            </label>
+                            <div class="col-sm-8">
+                                <select class="custom-select " id="leaguesddl" name="leaguecode" autofocus>
+                                    <option value="select a Location" selected disabled>Choose one</option>
+                                </select>
                             </div>
+                        </div>
                         <!-- End of dropdown-->
 
                         <div class="form-group row">
                             <label for="teamName" class="col-sm-4 col-form-label font-weight-bold">Team Name:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="teamName" name="teamname" placeholder="Enter Team Name">
+                                <input type="text" class="form-control" id="teamName" name="teamname"
+                                    placeholder="Enter Team Name">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="managername" class="col-sm-4 col-form-label font-weight-bold"> Manager Name:</label>
+                            <label for="managername" class="col-sm-4 col-form-label font-weight-bold"> Manager
+                                Name:</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="managername" name="managername" required
                                     autocomplete="off" placeholder="Enter Manager Name">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="managerphone" class="col-sm-4 col-form-label font-weight-bold">Manager Phone:</label>
+                            <label for="managerphone" class="col-sm-4 col-form-label font-weight-bold">Manager
+                                Phone:</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="managerphone" name="managerphone"
                                     autocomplete="off" placeholder="999-999-9999">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="manageremail" class="col-sm-4 col-form-label font-weight-bold">Manager E-mail: </label>
+                            <label for="manageremail" class="col-sm-4 col-form-label font-weight-bold">Manager E-mail:
+                            </label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="manageremail" name='manageremail'  placeholder="email@email.com">
+                                <input type="text" class="form-control" id="manageremail" name='manageremail'
+                                    placeholder="email@email.com">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="teammembers" class="col-sm-4 col-form-label font-weight-bold">Number of Players:</label>
+                            <label for="teammembers" class="col-sm-4 col-form-label font-weight-bold">Number of
+                                Players:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="teammembers" name="maxteammembers" autocomplete="off"  placeholder="Enter Number of Players">
+                                <input type="text" class="form-control" id="teammembers" name="maxteammembers"
+                                    autocomplete="off" placeholder="Enter Number of Players">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="minmemberage" class="col-sm-4 col-form-label font-weight-bold"> Minimum Age:</label>
+                            <label for="minmemberage" class="col-sm-4 col-form-label font-weight-bold"> Minimum
+                                Age:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="minmemberage" name="minmemberage" autocomplete="off"  placeholder="Enter Minimum Age">
+                                <input type="text" class="form-control" id="minmemberage" name="minmemberage"
+                                    autocomplete="off" placeholder="Enter Minimum Age">
                             </div>
                         </div>
                         <div class="form-group row">
-                                <label for="maxmemberage" class="col-sm-4 col-form-label font-weight-bold"> Maximum Age:</label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="maxmemberage" name="maxmemberage" autocomplete="off"  placeholder="Enter Maximum Age">
-                                </div>
+                            <label for="maxmemberage" class="col-sm-4 col-form-label font-weight-bold"> Maximum
+                                Age:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="maxmemberage" name="maxmemberage"
+                                    autocomplete="off" placeholder="Enter Maximum Age">
                             </div>
+                        </div>
                         <div class="form-group row">
                             <label for="Age" class="col-sm-4 col-form-label font-weight-bold">Team Gender:</label>
                             <!-- Radio Buttons for Gender-->
                             <div class="d-block">
                                 <div class="custom-control custom-radio malediv">
-                                     <div class="col-sm-8">
-                                    <input class="custom-control-input" type="radio" name="teamgender" id="male"
-                                        value="Male" checked>  
-                                    <label class="custom-control-label" for="male">Male</label>
+                                    <div class="col-sm-8">
+                                        <input class="custom-control-input" type="radio" name="teamgender" id="male"
+                                            value="Male" checked>
+                                        <label class="custom-control-label" for="male">Male</label>
                                     </div>
                                 </div>
                                 <div class="custom-control custom-radio femalediv">
-                                        <div class="col-sm-8">
-                                    <input class="custom-control-input" type="radio" name="teamgender" id="female"
-                                        value="Female">
-                                    <label class="custom-control-label" for="female">Female</label>
-                                </div>
+                                    <div class="col-sm-8">
+                                        <input class="custom-control-input" type="radio" name="teamgender" id="female"
+                                            value="Female">
+                                        <label class="custom-control-label" for="female">Female</label>
+                                    </div>
                                 </div>
                                 <div class="custom-control custom-radio anydiv">
-                                        <div class="col-sm-8">
+                                    <div class="col-sm-8">
                                         <input class="custom-control-input" type="radio" name="teamgender" id="any"
                                             value="Any">
                                         <label class="custom-control-label" for="any">Any</label>
                                     </div>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="text-center">
                             <button id="addBtn" class="btn btn btn-primary" type="button">Add New Team</button>
-                            <a href="leagues.html" class="btn btn-info active" role="button" aria-pressed="true">Go Back</a>
+                            <a href="leagues.html" class="btn btn-info active" role="button" aria-pressed="true">Go
+                                Back</a>
                             <button type="reset" class="btn btn-danger">Reset</button>
                         </div>
                         <ul class="alert alert-danger my-2 text-center" id="errorTeam" role="alert"></ul>
@@ -126,8 +140,11 @@
                 </div>
             </div>
         </section>
-
     </main>
+    <footer class="footer text-center">
+        The content of this page is for Educational purposes only. Images and Content have been colected from different
+        sites.
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

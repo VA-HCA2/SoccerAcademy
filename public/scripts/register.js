@@ -67,7 +67,6 @@ function validateForm(objs) {
     let phonepattern = /^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/
     let errMsg = [];
 
-
     if ($("#memberName").val().trim() == "") {
         errMsg[errMsg.length] = "Name is required";
     }
