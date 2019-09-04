@@ -81,6 +81,11 @@ function validateFormTeam() {
     let phonepattern= /^1?[-\. ]?(\(\d{3}\)?[-\. ]?|\d{3}?[-\. ]?)?\d{3}?[-\. ]?\d{4}$/
     let errMsg = [];
 
+    if ($("#leaguesddl").val() === null)
+    {
+        errMsg[errMsg.length] = "League is required";
+    }
+
     if ($("#teamName").val().trim() == "") {
         errMsg[errMsg.length] = "Team Name is required";
     }

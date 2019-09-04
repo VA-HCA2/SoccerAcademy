@@ -37,6 +37,15 @@
                 "Age": 25,
                 "Gender": "Female",
                 "Phone": "546-856-9685"
+            },
+            {
+                "MemberId": 376,
+                "Email": "cristinaber45@yahoo.com",
+                "MemberName": "Cristina Bermea",
+                "ContactName": "Cristina  Bermea",
+                "Age": 25,
+                "Gender": "Female",
+                "Phone": "546-098-0987"
             }
         ]
     },
@@ -206,6 +215,15 @@
                 "Age": 27,
                 "Gender": "Female",
                 "Phone": "817-555-5454"
+            },
+            {
+                "MemberId": 377,
+                "Email": "dorispena@yahoo.com",
+                "MemberName": "Doris Pena",
+                "ContactName": "Doris Pena ",
+                "Age": 25,
+                "Gender": "Female",
+                "Phone": "346-098-7695"
             }
         ]
     },
@@ -217,7 +235,7 @@
         "ManagerPhone": "817-555-5454",
         "ManagerEmail": "majo_arce12@aol.com",
         "MinMemberAge": 18,
-        "MaxMemberAge": 30,
+        "MaxMemberAge": 29,
         "MaxTeamMembers": 11,
         "TeamGender": "Male",
         "Members": [
@@ -247,15 +265,6 @@
                 "Age": 25,
                 "Gender": "Male",
                 "Phone": "569-845-5896"
-            },
-            {
-                "MemberId": 372,
-                "Email": "josecastro@yahoo.com",
-                "MemberName": "Jose Castro ",
-                "ContactName": "Jose Castro ",
-                "Age": 20,
-                "Gender": "Male",
-                "Phone": "347-495-9635"
             }
         ]
     },
@@ -273,29 +282,35 @@
         "Members": []
     },
     {
-        "TeamId": 193,
-        "TeamName": "dsfsd",
-        "League": "IntLeague",
-        "ManagerName": "sdf",
-        "ManagerPhone": "452-458-8965",
-        "ManagerEmail": "sad@yahoo.com",
-        "MaxTeamMembers": 12,
-        "MinMemberAge": 10,
-        "MaxMemberAge": 10,
-        "TeamGender": "Male",
-        "Members": []
-    },
-    {
-        "TeamId": 195,
-        "TeamName": "sdf",
-        "League": "CTTeam",
-        "ManagerName": "sadf",
-        "ManagerPhone": "347-495-5243",
-        "ManagerEmail": "dfds@yhaoo.com",
-        "MaxTeamMembers": 12,
-        "MinMemberAge": 10,
-        "MaxMemberAge": 10,
-        "TeamGender": "Male",
-        "Members": []
+        "TeamId": 197,
+        "TeamName": "Round Rock Team",
+        "League": "TXTeam",
+        "ManagerName": "Sandra Arce",
+        "ManagerPhone": "345-876-0864",
+        "ManagerEmail": "sandra@yahoo.com",
+        "MaxTeamMembers": 2,
+        "MinMemberAge": 15,
+        "MaxMemberAge": 20,
+        "TeamGender": "Female",
+        "Members": [
+            {
+                "MemberId": 378,
+                "Email": "lidia@yahoo.com",
+                "MemberName": "Lidia Penafiel",
+                "ContactName": "Lidia Penafiel",
+                "Age": 18,
+                "Gender": "Female",
+                "Phone": "456-098-0987"
+            },
+            {
+                "MemberId": 379,
+                "Email": "nube@yahoo.com",
+                "MemberName": "Nube Arce",
+                "ContactName": "Nube Arce",
+                "Age": 20,
+                "Gender": "Female",
+                "Phone": "564-098-9874"
+            }
+        ]
     }
 ]

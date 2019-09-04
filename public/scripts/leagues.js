@@ -56,7 +56,6 @@ function getLeagues(leaguesObjs){
 
 function getTeams(leaguesObjs){
   let obj;
-
   // dropdown for teams 
   $.getJSON("/api/teams", function(data){
     obj = data;
@@ -99,7 +98,7 @@ function getTeams(leaguesObjs){
 
 //Function for search by gender 
 
-function searchByGender(leaguesObjs,obj){
+function searchByGender(leaguesObjs){
 
   $("#genderddl").change(function () {
     $("#teamTable").empty();
@@ -107,22 +106,21 @@ function searchByGender(leaguesObjs,obj){
   
   $.getJSON("/api/teams/", function (data) {
 
-     let league=data
+     let leagues=data
    
 
     // Call my create a header function
     createHeader()
 
      // Create my dropdown information from api/leagues
-     for (let i = 0; i < league.length; i++) {
+     for (let i = 0; i < leagues.length; i++) {
   
-      if (leagues[i].Gender == $("#searchGender").val()) {
+      if (leagues[i].TeamGender == $("#genderddl").val() || $("#genderddl").val()=="Any") {
 
-        leaguesObjs = data;
       //Table Body
-        let str = "<tr><td>" + leaguesObjs.TeamName + "</td><td>" + leaguesObjs.ManagerName + "</td><td>"
-        + leaguesObjs.ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leaguesObjs.TeamId + ">Details<a>" + "</td><td>"
-        + "<a href=edit.html?TeamId=" + leaguesObjs.TeamId + ">Edit<a></td></tr>";
+        let str = "<tr><td>" + leagues[i].TeamName + "</td><td>" + leagues[i].ManagerName + "</td><td>"
+        + leagues[i].ManagerPhone + "</td><td>" + "<a href=details.html?TeamId=" + leagues[i].TeamId + ">Details<a>" + "</td><td>"
+        + "<a href=edit.html?TeamId=" + leagues[i].TeamId + ">Edit<a></td></tr>";
 
         $("#teamTable").append(str);
       }

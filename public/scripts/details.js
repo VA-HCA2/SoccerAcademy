@@ -15,10 +15,6 @@ $(function () {
         });
     });
 
-    $("#moreinfoBtn").on("click", function () {
-        getMoreInfo()
-    });
-
 }); // end of ready fuction
 
 //Table Body
@@ -75,9 +71,6 @@ function playersDetails(obj, TeamId) {
             placement: 'right',
             trigger: 'hover',
         })
-    
-
-      
     }
       // Hide if there are not registered players
         
@@ -86,21 +79,3 @@ function playersDetails(obj, TeamId) {
     }
 }
 
-
-function getMoreInfo(){
-    let card = $("<div>", {class: "card col-md-4 m-4"});
-    let cardHead = $("<h4>", {text: "Player Information", class:"card-header text-center"})
-    let cardBody = $("<div>", {class: "card-body"});
-    let cardTitle = $("<p>", {text: "\u2022 Max Team Size - " + team.MaxTeamMembers});
-    let cardText1 = $("<p>", {text: "\u2022 Ages " + team.MinMemberAge + "-" + team.MaxMemberAge});
-    let cardText2 = $("<p>", {text: "\u2022 Gender - " + team.TeamGender})
-
-    // Append the body
-    card.append(cardHead)
-        .append(cardBody);
-
-    // Append each tag to the body
-    cardBody.append(cardTitle)
-        .append(cardText1)
-        .append(cardText2)
-}
