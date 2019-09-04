@@ -112,7 +112,9 @@ function validateForm(objs) {
         errMsg[errMsg.length] = "Gender is required";
     }
     // Validate if Gender is not equal to the team requirements. 
-
+    if (($("input[name='gender']:checked").val() != objs.TeamGender)){
+        errMsg[errMsg.length] = "Player's Gender not allowed on this Team."
+    }
     else if (($("input[name='gender']:checked").val() != objs.TeamGender) && ($("input[name='gender']:checked").val() == null)) {
         if ($("input[name='gender']:checked").val() != "Any") {
             errMsg[errMsg.length] = "Player's Gender not allowed on this Team.";
