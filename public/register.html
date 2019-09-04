@@ -36,7 +36,7 @@
                 <div class="col-md-12">
                     <form class="form " method="GET" id="newPlayer" autocomplete="off">
                         <div class="form-group row">
-                            <label for="courseId" class="col-sm-4 col-form-label font-weight-bold">Team Name:</label>
+                            <label class="col-sm-4 col-form-label font-weight-bold">Team Name:</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="teamName" name="teamName" readonly>
                             </div>
@@ -44,44 +44,48 @@
                         <div class="form-group row">
                             <label for="memberName" class="col-sm-4 col-form-label font-weight-bold">Name:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="memberName" name="membername" placeholder="Enter Member Name" required
-                                    autocomplete="off" autofocus>
+                                <input type="text" class="form-control" id="memberName" name="membername"
+                                    placeholder="Enter Member Name" required autocomplete="off" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="contactName" class="col-sm-4 col-form-label font-weight-bold">Contact
                                 Name:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="contactName" name="contactname" autocomplete="off" placeholder="Enter Contact Name">
+                                <input type="text" class="form-control" id="contactName" name="contactname"
+                                    autocomplete="off" placeholder="Enter Contact Name">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label font-weight-bold">Email Address: </label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="email" name='email' placeholder="email@mail.com">
+                                <input type="text" class="form-control" id="email" name='email'
+                                    placeholder="email@mail.com">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="phone" class="col-sm-4 col-form-label font-weight-bold">Phone Number:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="phone" name="phone" autocomplete="off" placeholder="999-999-9999">
+                                <input type="text" class="form-control" id="phone" name="phone" autocomplete="off"
+                                    placeholder="999-999-9999">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="age" class="col-sm-4 col-form-label font-weight-bold">Age:</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="age" name="age" autocomplete="off" placeholder="Enter Age">
-                            </div> 
+                                <input type="text" class="form-control" id="age" name="age" autocomplete="off"
+                                    placeholder="Enter Age">
+                            </div>
                         </div>
 
                         <!-- Radio Buttons for Gender-->
                         <div class="form-group row">
-                            <label for="gender" class="col-sm-4 col-form-label font-weight-bold">Gender:</label>
+                            <label class="col-sm-4 col-form-label font-weight-bold">Gender:</label>
                             <div class="d-block">
                                 <div class="custom-control custom-radio">
                                     <div class="col-sm-8">
                                         <input class="custom-control-input" type="radio" name="gender" id="male"
-                                            value="Male" >
+                                            value="Male">
                                         <label class="custom-control-label" for="male">Male</label>
                                     </div>
                                 </div>
@@ -97,12 +101,12 @@
                         <div class="text-center">
                             <button id="registerBtn" class="btn btn btn-primary" type="button">Register to
                                 Team</button>
-                            <a href="#" class="btn btn-info active" role="button"
-                                aria-pressed="true" id="returnBtn">Go Back</a>
+                            <a href="#" class="btn btn-info active" role="button" aria-pressed="true" id="returnBtn">Go
+                                Back</a>
                             <button type="reset" class="btn btn-danger" id="resetBtn">Reset</button>
                         </div>
-                        <div class="alert alert-danger my-2 text-center hide" id="numOfPlayers" role="alert" ></div>
-                        <ul class="alert alert-danger my-2 text-center" id="error" role="alert"></ul>
+                        <div class="alert alert-danger my-2 text-center hide" id="numOfPlayers" role="alert"></div>
+                        <ul class="alert alert-danger my-2 text-center" id="error"></ul>
                     </form>
                 </div>
             </div>
